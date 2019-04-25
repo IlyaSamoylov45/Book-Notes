@@ -1,0 +1,2 @@
+Chapter 2. A whirlwind tour
+2.1. Setting up your environment 
