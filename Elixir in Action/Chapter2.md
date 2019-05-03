@@ -49,23 +49,23 @@ Chapter 2 Building Blocks
   - Kernel contains functions that are often used, so automatic importing makes their use easier.
   - alias: makes it possible to reference a module under a different name
     ex use of alias:
-
+    ```elixir
     defmodule MyModule do
       alias IO, as: aliasTest
       def function3 do
         aliasTest.puts("alias called")
       end
     end
-
+    ```
     ex2 use of alias:
-
+    ```elixir
     defmodule MyModule do
       alias Geometry.Rectangle
       def my_function do
         Rectangle.area(...)
       end
     end
-
+    ```
 2.3.6 Module attributes
   - Purpose of module attributes
     1. can be used as compile-time constants
@@ -77,7 +77,7 @@ Chapter 2 Building Blocks
       - gives list and inserts any value into index integer then returns a list
 
 2.3.7 Comments
-  - #
+  - Hashtag : #
   - no block comments.
 
 2.4 Understanding the type system
@@ -85,11 +85,15 @@ Chapter 2 Building Blocks
 2.4.1 Numbers
   - The division operator / always returns a float value
   - To do integer division or calculate remainder use auto-imported Kernel function
+    ```elixir
     rem(3, 2) = 1
     div(5, 2) = 2
+    ```
   - INTERESTING: You can use the underscore character as a visual delimiter:
+  ```elixir
     iex> 1_000
     1000
+  ```
 
 2.4.2 Atoms
   - Atoms are literal named constants
@@ -110,12 +114,14 @@ Chapter 2 Building Blocks
 2.4.3 Tuples
   - To extract an element from the tuple, you can use the Kernel.elem/2 function which accepts a tuple and and a zero-based index
     ex:
+    ```elixir
       iex> test = {"book", 300}
            {"book", 300}
       iex> pages = elem(test, 1)
            300
       iex> pages = put_elem(test, 1, 400)
           {"book", 400}
+    ```
   - Tuples are most appropriate for grouping a small, fixed number of elements together
 
 2.4.4 Lists
@@ -128,10 +134,12 @@ Chapter 2 Building Blocks
   - List is a pair of two values: head and tail.
   - Remember that internally, lists are recursive structures of (head, tail) pairs.
   - hd function for head, tl function for tail.
+    ```elixir
     iex> hd([1, 2])
          1
     iex> tl([1, 2])
          2
+    ```
   - Both hd and tl take O(1)
 
 2.4.5 Immutability
