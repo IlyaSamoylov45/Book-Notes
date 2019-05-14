@@ -20,4 +20,4 @@ Adding Structure: Tuples
   - Often (but not always) an atom at the beginning of the tuple indicates what its for
 
 Pattern Matching with Tuples
-  -
+  - Tuples make it easy to package multiple arguments into a single container and let the receiving function decide what to do with them.
