@@ -1,4 +1,4 @@
-CHAPTER 10 Exceptions, Errors, and Debugging
+Chapter 10 Exceptions, Errors, and Debugging
 
 Flavors of Errors
 
